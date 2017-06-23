@@ -29,6 +29,10 @@ public class Config {
         JSONArray backdropSizeOptions = images.getJSONArray("backdrop_sizes");
         backdropSize = backdropSizeOptions.optString(1, "w780");
 
+        // parse youtube link
+        //JSONArray  youtubeOptions = images
+        //youtubeLink = youtubeOptions.optString()
+
     }
 
     // helper method for creating urls

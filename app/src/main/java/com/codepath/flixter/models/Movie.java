@@ -47,4 +47,8 @@ public class Movie {
     public double getVoteAverage() {
         return voteAverage;
     }
+
+    public Integer getId() {
+        return id;
+    }
 }
