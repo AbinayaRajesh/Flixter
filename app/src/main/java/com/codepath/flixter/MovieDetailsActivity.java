@@ -10,6 +10,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.codepath.flixter.models.Config;
 import com.codepath.flixter.models.Movie;
 import com.loopj.android.http.AsyncHttpClient;
@@ -24,6 +25,7 @@ import org.parceler.Parcels;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import cz.msebera.android.httpclient.Header;
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 import static com.codepath.flixter.MovieListActivity.API_BASE_URL;
 import static com.codepath.flixter.MovieListActivity.API_KEY_PARAM;
@@ -54,7 +56,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
     @BindView(imgView) ImageView img;
 
     String key;
-    //Config config;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,22 +69,23 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
         // unwrap the movie passed in via intent, using its simple name as a key
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
+        config = (Config) Parcels.unwrap(getIntent().getParcelableExtra(Config.class.getSimpleName()));
         Log.d("MovieDetailsActivity", String.format("Showing details for '%s'", movie.getTitle()));
 
         // set the title and overview
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
-        //String path = movie.getBackdropPath();
-        //ImageView imageview = (ImageView) findViewById(R.id.imgView);
-        //String imageUrl = config.getImageUrl(config.getBackdropSize(), movie.getBackdropPath());
+        String path = movie.getBackdropPath();
+        ImageView imageview = (ImageView) findViewById(R.id.imgView);
+        String imageUrl = config.getImageUrl(config.getBackdropSize(), movie.getBackdropPath());
 
         // load image using glide
-//        Glide.with(this)
-//                .load(imageUrl)
-//                //.placeholder(placeholderId)
-//                //.error(placeholderId)
-//                .bitmapTransform(new RoundedCornersTransformation(this, 25, 0))
-//                .into(imageview);
+        Glide.with(this)
+                .load(imageUrl)
+                //.placeholder(placeholderId)
+                //.error(placeholderId)
+                .bitmapTransform(new RoundedCornersTransformation(this, 25, 0))
+                .into(imageview);
 
         getVideo();
         img.setOnClickListener(new View.OnClickListener() {

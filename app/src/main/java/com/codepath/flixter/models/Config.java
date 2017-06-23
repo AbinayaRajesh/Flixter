@@ -3,11 +3,12 @@ package com.codepath.flixter.models;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 /**
  * Created by arajesh on 6/22/17.
  */
-
+@Parcel
 public class Config {
 
     // the base url for loading images
@@ -16,6 +17,8 @@ public class Config {
     String posterSize;
     // the backdrop size to use when fetching images
     String backdropSize;
+
+    public Config() {}
 
     public Config (JSONObject object) throws JSONException {
         JSONObject images = object.getJSONObject("images");
