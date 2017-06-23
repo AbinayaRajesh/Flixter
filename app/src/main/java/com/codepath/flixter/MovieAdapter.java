@@ -116,8 +116,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
 
 
 
-
-
         // when the user clicks on a row, show MovieDetailsActivity for the selected movie
         @Override
         public void onClick(View v) {

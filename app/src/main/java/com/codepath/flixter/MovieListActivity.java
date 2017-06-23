@@ -71,8 +71,6 @@ public class MovieListActivity extends AppCompatActivity {
         // get the configuration on app creation
         getConfiguration();
 
-
-
     }
 
 
