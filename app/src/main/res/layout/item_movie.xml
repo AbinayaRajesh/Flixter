@@ -13,7 +13,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         app:srcCompat="@android:color/black"
-        android:layout_marginRight="5dp"/>
+        android:layout_marginRight="8dp" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -24,7 +24,8 @@
         android:text="Movie Title"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textAllCaps="true"/>
 
     <TextView
         android:id="@+id/tvOverview"
@@ -35,6 +36,8 @@
         android:text="Movie Overview and Synopsis"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:ellipsize="end"
+        android:maxLines="5"
        />
 
 </RelativeLayout>

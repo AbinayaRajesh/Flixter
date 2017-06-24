@@ -60,6 +60,9 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Enable up icon
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
         ButterKnife.bind(this);
@@ -82,8 +85,8 @@ public class MovieDetailsActivity extends AppCompatActivity {
         // load image using glide
         Glide.with(this)
                 .load(imageUrl)
-                //.placeholder(placeholderId)
-                //.error(placeholderId)
+                .placeholder(R.drawable.flicks_backdrop_placeholder)
+                .error(R.drawable.flicks_backdrop_placeholder)
                 .bitmapTransform(new RoundedCornersTransformation(this, 25, 0))
                 .into(imageview);
 

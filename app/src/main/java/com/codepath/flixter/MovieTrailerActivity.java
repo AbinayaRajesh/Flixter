@@ -18,6 +18,7 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
 
 
 
+
         // resolve the player view from the layout
         YouTubePlayerView playerView = (YouTubePlayerView) findViewById(R.id.player);
 
