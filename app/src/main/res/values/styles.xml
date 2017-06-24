@@ -2,7 +2,7 @@
 
 
     <!-- Define your colors in `res/values/colors.xml` -->
-    <color name="simple_yellow">#FFA500</color>
+    <color name="yellow">#FFA500</color>
     <color name="primary_blue">#53777A</color>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -15,11 +15,11 @@
     </style>
 
     <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <item name="android:background">@color/simple_yellow</item>
+        <item name="android:background">@color/purple</item>
         <item name="android:titleTextStyle">@style/MyActionBar.TitleTextStyle</item>
 
         <!-- Support library compatibility -->
-        <item name="background">@color/simple_yellow</item>
+        <item name="background">@color/purple</item>
         <item name="titleTextStyle">@style/MyActionBar.TitleTextStyle</item>
     </style>
 

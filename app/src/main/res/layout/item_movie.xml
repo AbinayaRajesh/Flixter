@@ -21,14 +21,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/ivPosterImage"
-        android:text="Movie Title"
+        android:text="@string/movie_title"
+        android:textColor="#ffffff"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:textAllCaps="true"/>
+        android:textAllCaps="true"
+        android:background="@color/purple"
+        android:gravity="center_horizontal"/>
 
     <TextView
         android:id="@+id/tvOverview"
+        android:textColor="@color/purple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvTitle"
@@ -38,6 +42,7 @@
         android:layout_alignParentEnd="true"
         android:ellipsize="end"
         android:maxLines="5"
+        android:background="@color/light_purple"
        />
 
 </RelativeLayout>
